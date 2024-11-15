@@ -1,0 +1,21 @@
+<launch>
+  <!-- Kamera yayını başlat -->
+  <node name="camera_node" pkg="usb_cam" type="usb_cam_node" output="screen">
+    <param name="video_device" value="/dev/video0" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+  </node>
+
+  <!-- Çizgi izleme script'ini başlat -->
+  <node name="line_follower" pkg="raclab_line" type="line_follower.py" output="screen">
+    <!-- Gerekli parametreler varsa buraya ekleyin -->
+  </node>
+  
+  <!-- Hareket komutlarını yayınlamak için cmd_vel yayınlayıcı -->
+  <node name="cmd_vel_publisher" pkg="roscpp" type="node" output="screen">
+    <param name="cmd_vel_topic" value="/cmd_vel" />
+  </node>
+
+</launch>
+

@@ -1,0 +1,11 @@
+<launch>
+  <!-- TurtleBot3 SLAM başlatma -->
+  <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+    <arg name="slam_methods" value="gmapping"/>
+  </include>
+
+  <!-- Line takip düğümü -->
+  <node name="line" pkg="raclab_follow" type="line.py" output="screen">
+  </node>
+</launch>
+
