@@ -16,8 +16,8 @@ Robot modeli olarak, kamera ve LIDAR sensörü bulundurduğundan [TurtleBot3 Waf
     mkdir -p metinol_ws/src
     cd metinol_ws
     catkin_make
-    echo "source metinol_ws/devel/setup.bash" >> .bashrc
-    source .bashrc
+    echo "source ~/metinol_ws/devel/setup.bash" >> ~/.bashrc
+    source ~/.bashrc
     ```
 2. Paket oluşturulur, gerekli ROS bağımlılıkları belirtilir:
     ```bash
@@ -26,8 +26,8 @@ Robot modeli olarak, kamera ve LIDAR sensörü bulundurduğundan [TurtleBot3 Waf
     ```
 3. Script oluşturulur ve çalıştırılma izni verilir:
     ```bash
-    touch metinol_ws/src/raclab_follow/src/line.py
-    chmod +x metinol_ws/src/raclab_follow/src/line.py
+    touch ~/metinol_ws/src/raclab_follow/src/line.py
+    chmod +x ~/metinol_ws/src/raclab_follow/src/line.py
     ```
 4. Çalışma alanına (ROS Workspace) proje klonlanır:
     ```bash
@@ -60,3 +60,5 @@ Otonom robot simülasyonu için Gazebo ortamında bir dünya oluşturulmuştur. 
     ```bash
     https://youtu.be/A3fJwTL2O4g?si=xMR9dMEJOQn9cwpc
     ```
+### Gazebo World
+![raclab_dunya](https://github.com/user-attachments/assets/5e53327c-a50e-498e-ab7d-c18f95ae3430)
